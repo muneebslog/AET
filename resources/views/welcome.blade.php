@@ -65,7 +65,7 @@
         </div>
 
         <a href="#"
-            class="burgundy-solid hover:bg-red-900 text-white px-8 py-3 rounded-md font-bold transition-all shadow-lg hover:-translate-y-0.5">
+            class="burgundy-solid hover:bg-red-900 text-white sm:px-4 px-8 py-3 rounded-md font-bold transition-all shadow-lg hover:-translate-y-0.5">
             Donate Now
         </a>
     </nav>
