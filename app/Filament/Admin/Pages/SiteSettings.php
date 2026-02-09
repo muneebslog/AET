@@ -5,10 +5,11 @@ namespace App\Filament\Admin\Pages;
 use App\Models\Setting;
 use Filament\Pages\Page;
 use Filament\Schemas\Schema;
-use Filament\Schemas\Components\Section;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
+use Filament\Schemas\Components\Section;
 use Filament\Forms\Concerns\InteractsWithForms;
 
 class SiteSettings extends Page implements HasForms
@@ -109,7 +110,9 @@ class SiteSettings extends Page implements HasForms
         foreach ($this->data as $key => $value) {
             Setting::set($key, $value);
         }
-
-        $this->notify('success', 'Settings saved successfully.');
+        Notification::make()
+            ->title('Settings saved successfully.')
+            ->success()
+            ->send();
     }
 }
