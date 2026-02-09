@@ -52,17 +52,17 @@
     <nav class="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 lg:px-16">
         <div class="flex items-center gap-2">
             <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                <img src="{{ asset('img/logo.png') }}" alt="Ummahly Logo" class="w-full h-full object-contain">
+                <img src="{{ asset('img/logo.png') }}" alt="AET Foundation Logo" class="w-full h-full object-contain">
             </div>
             <span class="text-2xl font-extrabold tracking-tight text-white uppercase">AET Foundation</span>
         </div>
 
-        <div class="hidden md:flex items-center space-x-10 text-white font-medium">
+        {{-- <div class="hidden md:flex items-center space-x-10 text-white font-medium">
             <a href="#" class="hover:text-warm-gold transition-colors">Home</a>
             <a href="#" class="hover:text-warm-gold transition-colors">Current Appeals</a>
             <a href="#" class="hover:text-warm-gold transition-colors">Posts & Updates</a>
             <a href="#" class="hover:text-warm-gold transition-colors">Get Involved</a>
-        </div>
+        </div> --}}
 
         <a href="#"
             class="burgundy-solid hover:bg-red-900 text-white px-3 text-sm sm:text-base sm:px-8 py-3 rounded-md font-bold transition-all shadow-lg hover:-translate-y-0.5">
@@ -242,10 +242,10 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20 max-w-7xl mx-auto">
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center gap-2 mb-6">
-                    <div class="w-8 h-8 rounded-full bg-warm-gold flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">U</span>
+                    <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">AET</span>
                     </div>
-                    <span class="text-xl font-extrabold tracking-tight text-burgundy uppercase">Ummahly</span>
+                    <span class="text-xl font-extrabold tracking-tight text-burgundy uppercase">AET Foundation</span>
                 </div>
                 <p class="text-slate-500 mb-6">
                     {{ $settings['footer_registration_number'] ?? '' }} <br />

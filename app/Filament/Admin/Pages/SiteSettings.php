@@ -14,7 +14,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 class SiteSettings extends Page implements HasForms
 {
     use InteractsWithForms;
-    
+
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-cog';
 
@@ -54,6 +54,52 @@ class SiteSettings extends Page implements HasForms
                         Textarea::make('mission_description')->rows(4),
                         TextInput::make('mission_button_text'),
                     ]),
+                Section::make('Trust Steps')
+                    ->schema([
+                        TextInput::make('trust_step_1_title'),
+                        Textarea::make('trust_step_1_description'),
+
+                        TextInput::make('trust_step_2_title'),
+                        Textarea::make('trust_step_2_description'),
+
+                        TextInput::make('trust_step_3_title'),
+                        Textarea::make('trust_step_3_description'),
+                    ]),
+                Section::make('Transparency Section')
+                    ->schema([
+                        TextInput::make('transparency_title'),
+                        TextInput::make('transparency_subtitle'),
+
+                        TextInput::make('transparency_programs_label'),
+                        TextInput::make('transparency_programs_percent')->numeric(),
+
+                        TextInput::make('transparency_fundraising_label'),
+                        TextInput::make('transparency_fundraising_percent')->numeric(),
+
+                        TextInput::make('transparency_admin_label'),
+                        TextInput::make('transparency_admin_percent')->numeric(),
+
+                        Textarea::make('transparency_audit_text'),
+                    ]),
+                Section::make('Footer')
+                    ->description('Footer content and newsletter')
+                    ->schema([
+                        TextInput::make('footer_registration_number')
+                            ->label('Registration Number'),
+
+                        Textarea::make('footer_description')
+                            ->rows(3)
+                            ->label('Footer Description'),
+
+                        TextInput::make('footer_newsletter_text')
+                            ->label('Newsletter Description'),
+
+                        TextInput::make('footer_copyright')
+                            ->label('Copyright Text'),
+                    ])
+                    ->columns(2),
+
+
             ])
             ->statePath('data');
     }
