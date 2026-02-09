@@ -55,9 +55,10 @@ class ProjectForm
                 Section::make('Media')
                     ->schema([
                         FileUpload::make('featured_image')
-                            ->image()
-                            ->directory('projects')
-                            ->imageEditor(),
+                        ->image()
+                        ->disk('public') // 🔥 VERY IMPORTANT
+                        ->directory('projects')
+                        ->imageEditor(),                    
                     ]),
 
                 Section::make('Settings')

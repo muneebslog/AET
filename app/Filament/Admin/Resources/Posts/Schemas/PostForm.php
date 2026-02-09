@@ -43,6 +43,7 @@ class PostForm
                     ->schema([
                         FileUpload::make('featured_image')
                             ->image()
+                            ->disk('public') // 🔥 VERY IMPORTANT
                             ->directory('posts')
                             ->imageEditor(),
                     ]),

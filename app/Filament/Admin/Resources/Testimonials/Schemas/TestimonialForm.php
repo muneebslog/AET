@@ -30,6 +30,7 @@ class TestimonialForm
 
                         FileUpload::make('photo')
                             ->image()
+                            ->disk('public')
                             ->directory('testimonials')
                             ->imageEditor()
                             ->nullable(),
