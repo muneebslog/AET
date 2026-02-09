@@ -90,14 +90,15 @@
             </div>
         </div>
     </header>
-   <livewire:appeals-section/>
+    <livewire:appeals-section />
 
-   <livewire:stats-section/>
+    <livewire:stats-section />
 
     <section class="py-24 px-8 lg:px-16 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-slate-900 mb-4">{{ $settings['trust_section_title'] ?? '' }}</h2>
+                <h2 class="text-4xl font-extrabold text-slate-900 mb-4">{{ $settings['trust_section_title'] ?? '' }}
+                </h2>
                 <p class="text-slate-600 max-w-2xl mx-auto text-lg">{{ $settings['trust_section_subtitle'] ?? '' }}</p>
             </div>
 
@@ -134,53 +135,64 @@
 
     <section class="py-32 px-8 bg-[#F9F7F2]">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl lg:text-5xl font-extrabold mb-8 italic">{{ $settings['mission_quote_title'] ?? '' }}</h2>
+            <h2 class="text-4xl lg:text-5xl font-extrabold mb-8 italic">{{ $settings['mission_quote_title'] ?? '' }}
+            </h2>
             <div class="w-24 h-1 burgundy-solid mx-auto mb-8"></div>
             <p class="text-xl text-slate-700 leading-relaxed mb-12">
                 {{ $settings['mission_description'] ?? '' }}
             </p>
-            <button class="text-burgundy font-bold text-lg hover:underline transition-all">{{ $settings['mission_button_text'] ?? '' }}</button>
+            <button
+                class="text-burgundy font-bold text-lg hover:underline transition-all">{{ $settings['mission_button_text'] ?? '' }}</button>
         </div>
     </section>
 
-    <livewire:testimonials-section/>
+    <livewire:testimonials-section />
 
     <section class="py-24 px-8 lg:px-16 bg-white border-t border-stone-100">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-2">{{ $settings['transparency_title'] ?? '' }}</h2>
-                <p class="text-slate-500 uppercase tracking-widest text-xs font-bold">{{ $settings['transparency_subtitle'] ?? '' }}
+                <p class="text-slate-500 uppercase tracking-widest text-xs font-bold">
+                    {{ $settings['transparency_subtitle'] ?? '' }}
                 </p>
             </div>
 
             <div class="space-y-8">
                 <div>
                     <div class="flex justify-between items-center mb-2">
-                        <span class="font-bold text-slate-800">{{ $settings['transparency_programs_label'] ?? '' }}</span>
-                        <span class="font-bold text-burgundy">{{ $settings['transparency_programs_percent'] ?? '' }}%</span>
+                        <span
+                            class="font-bold text-slate-800">{{ $settings['transparency_programs_label'] ?? '' }}</span>
+                        <span
+                            class="font-bold text-burgundy">{{ $settings['transparency_programs_percent'] ?? '' }}%</span>
                     </div>
                     <div class="w-full h-3 bg-stone-100 rounded-full overflow-hidden">
-                        <div class="burgundy-solid h-full" style="width: {{ $settings['transparency_programs_percent'] ?? 88 }}%;"></div>
+                        <div class="burgundy-solid h-full"
+                            style="width: {{ $settings['transparency_programs_percent'] ?? 88 }}%;"></div>
                     </div>
                 </div>
 
                 <div>
                     <div class="flex justify-between items-center mb-2">
-                        <span class="font-bold text-slate-800">{{ $settings['transparency_fundraising_label'] ?? '' }}</span>
-                        <span class="font-bold text-burgundy">{{ $settings['transparency_fundraising_percent'] ?? '' }}%</span>
+                        <span
+                            class="font-bold text-slate-800">{{ $settings['transparency_fundraising_label'] ?? '' }}</span>
+                        <span
+                            class="font-bold text-burgundy">{{ $settings['transparency_fundraising_percent'] ?? '' }}%</span>
                     </div>
                     <div class="w-full h-3 bg-stone-100 rounded-full overflow-hidden">
-                        <div class="bg-stone-400 h-full" style="width: {{ $settings['transparency_fundraising_percent'] ?? 7 }}%;"></div>
+                        <div class="bg-stone-400 h-full"
+                            style="width: {{ $settings['transparency_fundraising_percent'] ?? 7 }}%;"></div>
                     </div>
                 </div>
 
                 <div>
                     <div class="flex justify-between items-center mb-2">
                         <span class="font-bold text-slate-800">{{ $settings['transparency_admin_label'] ?? '' }}</span>
-                        <span class="font-bold text-burgundy">{{ $settings['transparency_admin_percent'] ?? '' }}%</span>
+                        <span
+                            class="font-bold text-burgundy">{{ $settings['transparency_admin_percent'] ?? '' }}%</span>
                     </div>
                     <div class="w-full h-3 bg-stone-100 rounded-full overflow-hidden">
-                        <div class="bg-stone-300 h-full" style="width: {{ $settings['transparency_admin_percent'] ?? 5 }}%;"></div>
+                        <div class="bg-stone-300 h-full"
+                            style="width: {{ $settings['transparency_admin_percent'] ?? 5 }}%;"></div>
                     </div>
                 </div>
             </div>
@@ -212,19 +224,19 @@
                     class="aspect-square bg-white/5 rounded-full absolute -top-20 -right-20 w-[600px] h-[600px] blur-3xl">
                 </div>
                 @if(!empty($settings['global_image']))
-                <img src="{{ asset('storage/' . $settings['global_image']) }}"
-                    class="rounded-3xl relative z-10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                    alt="Global Impact">
+                    <img src="{{ asset('storage/' . $settings['global_image']) }}"
+                        class="rounded-3xl relative z-10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                        alt="Global Impact">
                 @else
-                <img src="https://images.unsplash.com/photo-1526660690293-bcd32dc3b123?q=80&w=2070&auto=format&fit=crop"
-                    class="rounded-3xl relative z-10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                    alt="Global Impact">
+                    <img src="https://images.unsplash.com/photo-1526660690293-bcd32dc3b123?q=80&w=2070&auto=format&fit=crop"
+                        class="rounded-3xl relative z-10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                        alt="Global Impact">
                 @endif
             </div>
         </div>
     </section>
 
-   <livewire:posts-section/>
+    <livewire:posts-section />
 
     <footer class="bg-stone-50 border-t border-stone-200 pt-20 pb-10 px-8 lg:px-16">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20 max-w-7xl mx-auto">
@@ -278,6 +290,9 @@
         </div>
         <div class="border-t border-stone-200 pt-8 text-center text-slate-400 text-sm">
             {{ $settings['footer_copyright'] ?? '' }}
+        </div>
+        <div class="border-t border-stone-200 pt-8 text-center text-slate-400 text-sm">
+            Admin Panel: <a  href="{{ url('admin') }}" class="text-burgundy">Click here</a>
         </div>
     </footer>
 
