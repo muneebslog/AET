@@ -203,7 +203,7 @@
         </div>
     </section>
 
-    <section class="bg-[#2D000A] text-white py-24 px-8 lg:px-16 overflow-hidden">
+    {{-- <section class="bg-[#2D000A] text-white py-24 px-8 lg:px-16 overflow-hidden">
         <div class="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             <div>
                 <h2 class="text-4xl font-extrabold mb-6">{{ $settings['global_title'] ?? '' }}</h2>
@@ -234,7 +234,7 @@
                 @endif
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <livewire:posts-section />
 
