@@ -46,4 +46,5 @@ class Post extends Model
             ->whereNotNull('published_at')
             ->where('published_at', '<=', now());
     }
+
 }
