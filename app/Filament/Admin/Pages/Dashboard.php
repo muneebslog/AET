@@ -11,8 +11,9 @@ class Dashboard extends Page
     protected function getHeaderWidgets(): array
     {
         return [
-            \App\Filament\Admin\Widgets\LatestSubscribers::class,
             \App\Filament\Admin\Widgets\StatsOverview::class,
+            \App\Filament\Admin\Widgets\LatestSubscribers::class,
+
         ];
     }
 }
