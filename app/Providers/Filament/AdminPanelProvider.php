@@ -35,12 +35,6 @@ class AdminPanelProvider extends PanelProvider
 
             ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\Filament\Admin\Widgets')
             ->spa()
-            ->widgets([
-                // FilamentInfoWidget::class,
-                \App\Filament\Admin\Widgets\LatestSubscribers::class,
-                \App\Filament\Admin\Widgets\StatsOverview::class,
-                // AccountWidget::class,
-            ])
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
@@ -57,11 +51,5 @@ class AdminPanelProvider extends PanelProvider
             ]);
     }
 
-    protected function getHeaderWidgets(): array
-    {
-        return [
-            \App\Filament\Admin\Widgets\LatestSubscribers::class,
-            \App\Filament\Admin\Widgets\StatsOverview::class,
-        ];
-    }
+  
 }
